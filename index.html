@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключение элегантного шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Плеер -->
+            <div class="music-player">
+                <audio id="wedding-audio" loop>
+                    <source src="1.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает аудио элемент.
+                </audio>
+                <div class="player-controls">
+                    <button id="play-btn" class="player-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="player-info">
+                        <span class="player-title">Наша свадебная песня</span>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <button id="mute-btn" class="player-btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Имена пары -->
+            <div class="couple-names">
+                <h1>Ринат</h1>
+                <div class="names-separator">
+                    <span class="ampersand">&</span>
+                </div>
+                <h1>Лилия</h1>
+            </div>
+
+            <!-- Счетчик -->
+            <div class="countdown-container">
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class="countdown-label">дней</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class="countdown-label">часов</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class="countdown-label">минут</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span class="countdown-label">секунд</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Приглашение -->
+    <section class="invitation">
+        <div class="container">
+            <h1 class="section-title">ДОРОГИЕ ГОСТИ</h1>
+            <div class="invitation-content">
+                <div class="invitation-text">
+                    <p>Мы рады пригласить вас разделить с нами радость самого важного дня в нашей жизни — день нашей свадьбы!</p>
+                    <p>Ваше присутствие сделает этот день по-настоящему особенным и незабываемым.</p>
+                    <p>С огромной любовью,<br><strong>Ринат и Лилия</strong></p>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <h3>Май 2026</h3>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <div>Пн</div>
+                            <div>Вт</div>
+                            <div>Ср</div>
+                            <div>Чт</div>
+                            <div>Пт</div>
+                            <div>Сб</div>
+                            <div>Вс</div>
+                        </div>
+                        <div class="calendar-days" id="calendar-days">
+                            <!-- Календарь будет сгенерирован через JS -->
+                        </div>
+                        <div class="calendar-legend">
+                            <div class="legend-item">
+                                <div class="legend-color wedding-day-color"></div>
+                                <span>День свадьбы</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Место проведения -->
+    <section class="location">
+        <div class="container">
+            <h1 class="section-title">МЕСТО ПРОВЕДЕНИЯ</h1>
+            <div class="location-content">
+                <div class="location-text">
+                    <p>Свадебная церемония и праздничный ужин состоятся в прекрасном банкетном зале.</p>
+                    <p><strong>Адрес:</strong> ст. Павловская, ул. Магистральная 1 В<br>Банкетный зал «Кристалл»</p>
+                    <p>Начало церемонии: 16:00</p>
+                </div>
+                <div class="location-image">
+                    <img src="2.jpg" alt="Место проведения свадьбы">
+                </div>
+                <a href="https://yandex.com/maps/-/CPeJUG8s" class="map-btn" target="_blank" rel="noopener noreferrer">ОТКРЫТЬ КАРТУ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Детали -->
+    <section class="details">
+        <div class="container">
+            <h1 class="section-title">ДЕТАЛИ</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-content">
+                        <h3>Выкуп</h3>
+                        <p>По адресу: ст. Атаманская 49А </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-content">
+                        <h3>Сбор гостей</h3>
+                        <p>Банкетный зал «Кристалл»</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3>Церемония регистрации брака</h3>
+                        <p>Приготовте платочки для трогательного момета</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>Начало банкета</h3>
+                        <p>Первый танец, конкурсы, фотозона</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Пожелания -->
+    <section class="wishes">
+        <div class="container">
+            <h1 class="section-title">ПОЖЕЛАНИЯ</h1>
+            <div class="wishes-content">
+                <p class="wishes-text">
+                   Вместо цветов — бутылка в наше семейное будущее.
+                   Каждую можно будет подписать на велком-зоне, чтобы ваш подарок согревал нас не один вечер.»
+                </p>
+                <!-- Вставьте этот блок после wishes-text и перед order-btn -->
+                    <div class="dresscode-container">
+                        <h3 class="section-title">ДРЕСС-КОД</h3>
+                        <p class="dresscode-subtitle">Мы будем рады видеть вас в элегантных образах в представленной цветовой гамме</p>
+                        <div class="color-palette">
+                            <div class="color-item" style="background: #ffffff;" title="#ffffff">
+                                <span class="color-tooltip">Белый</span>
+                            </div>
+                            <div class="color-item" style="background: #dbcfb5;" title="#dbcfb5">
+                                <span class="color-tooltip">Песочный</span>
+                            </div>
+                            <div class="color-item" style="background: #ada59c;" title="#ada59c">
+                                <span class="color-tooltip">Греж</span>
+                            </div>
+                            <div class="color-item" style="background: #7b7b7b;" title="#7b7b7b">
+                                <span class="color-tooltip">Серый</span>
+                            </div>
+                            <div class="color-item" style="background: #434343;" title="#434343">
+                                <span class="color-tooltip">Графит</span>
+                            </div>
+                            <div class="color-item" style="background: #2a2a2a;" title="#2a2a2a">
+                                <span class="color-tooltip">Антрацит</span>
+                            </div>
+                            <div class="color-item" style="background: #000000;" title="#000000">
+                                <span class="color-tooltip">Черный</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Анкета -->
+    <section class="rsvp">
+        <div class="container">
+                        <!-- Вставьте этот блок после rsvp-subtitle и перед rsvp-form -->
+            <div class="telegram-container">
+                <div class="telegram-icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </div>
+                <h3 class="telegram-title">ТЕЛЕГРАМ-ЧАТ МОЛОДОЖЕНОВ</h3>
+                <p class="telegram-text">
+                    Мы создали уютный чат в Telegram для наших гостей!<br>
+                    Там вы сможете следить за новостями, общаться с другими гостями и задавать вопросы
+                </p>
+                <a href="" class="telegram-btn" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    ПРИСОЕДИНИТЬСЯ К ЧАТУ
+                </a>
+                <p class="telegram-note">*Вы перейдете в Telegram</p>
+            </div>
+            <h1 class="section-title">АНКЕТА</h1>
+            <p class="rsvp-subtitle">Пожалуйста, подтвердите свое присутствие до 1 апреля 2026 года</p>
+            <form class="rsvp-form" id="rsvp-form">
+                <!-- Имя -->
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" placeholder="Введите ваше имя" required>
+                </div>
+                
+                <!-- Присутствие -->
+                <div class="form-group">
+                    <label>Придете на свадьбу?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="attendance-yes" name="attendance" value="yes" required>
+                            <label for="attendance-yes">
+                                <div class="radio-circle"></div>
+                                <span>С радостью буду!</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="attendance-no" name="attendance" value="no">
+                            <label for="attendance-no">
+                                <div class="radio-circle"></div>
+                                <span>К сожалению, не смогу</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Количество гостей -->
+                <div class="form-group">
+                    <label for="guests">Количество гостей (включая вас)</label>
+                    <div class="guests-selector">
+                        <button type="button" class="guest-btn" data-value="1">1</button>
+                        <button type="button" class="guest-btn" data-value="2">2</button>
+                        <button type="button" class="guest-btn" data-value="3">3</button>
+                        <button type="button" class="guest-btn" data-value="4">4</button>
+                        <button type="button" class="guest-btn" data-value="5">5</button>
+                    </div>
+                    <input type="hidden" id="guests" name="guests" value="1" required>
+                </div>
+                
+                <!-- Пожелания -->
+                <div class="form-group">
+                    <label for="message">Пожелания или особые предпочтения</label>
+                    <textarea id="message" placeholder="Диетические предпочтения, пожелания и т.д." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">ОТПРАВИТЬ ОТВЕТ</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>С нетерпением ждем Вас!</p>
+                <h3>Ринат и Лилия</h3>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div id="map-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Карта</h2>
+            <p>Здесь будет карта с местом проведения</p>
+            <p>Москва, ул. Пречистенка, д. 12/2</p>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Карта будет добавлена позже</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Заказ цветов</h2>
+            <p>Свяжитесь с нашей цветочной мастерской по телефону:</p>
+            <p class="flower-phone">+7 (XXX) XXX-XX-XX</p>
+            <p>Назовите код "Свадьба Анны и Алексея"</p>
+        </div>
+    </div>
+
+    <div id="thankyou-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Спасибо!</h2>
+            <p>Ваш ответ успешно отправлен.</p>
+            <p>Мы с нетерпением ждем встречи с вами!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
