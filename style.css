@@ -35,6 +35,7 @@ body {
 .hero {
     height: 100vh;
     background: url('1.jpg') no-repeat center center/cover;
+    background-position: -100px 50px !important;
     position: relative;
     display: flex;
     align-items: center;
@@ -496,7 +497,7 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 25px;
+    left: 32px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -530,15 +531,15 @@ body {
 
 .timeline-content {
     flex-grow: 1;
-    padding-left: 30px;
+    padding-left: 35px;
     position: relative;
 }
 
 /* Точки на временной линии */
-.timeline-item::before {
+/* .timeline-item::before {
     content: '';
     position: absolute;
-    left: 21px;
+    left: 29px;
     top: 8px;
     width: 12px;
     height: 12px;
@@ -547,12 +548,12 @@ body {
     z-index: 2;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1), 0 0 15px rgba(255, 255, 255, 0.2);
     transition: all 0.3s;
-}
+} */
 
-.timeline-item:hover::before {
+/* .timeline-item:hover::before {
     transform: scale(1.2);
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.3);
-}
+} */
 
 .timeline-content h3 {
     font-family: 'Cormorant Garamond', 'Georgia', serif;
@@ -1016,11 +1017,11 @@ body {
     }
     
     .timeline::before {
-        left: 22px;
+        left: 26px;
     }
     
     .timeline-item::before {
-        left: 18px;
+        left: 25px;
         width: 10px;
         height: 10px;
     }
@@ -1081,11 +1082,11 @@ body {
     }
     
     .timeline::before {
-        left: 30px;
+        left: 35px;
     }
     
     .timeline-item::before {
-        left: 26px;
+        left: 34px;
     }
 }
 
@@ -1550,4 +1551,38 @@ a {
     color: #252525;
     transform: none;
     box-shadow: none;
+}
+
+/* Добавьте после стилей .location-image */
+.location-map {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 0;
+}
+
+.location-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .location-map {
+        margin: 15px 0;
+    }
+}
+
+/* Можно также удалить или закомментировать старые стили .location-image */
+.location-image {
+    display: none; /* Скрываем старый блок с фото */
 }
