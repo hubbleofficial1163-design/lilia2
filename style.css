@@ -34,7 +34,7 @@ body {
 /* Hero секция */
 .hero {
     height: 100vh;
-    background: url('11.jpg') no-repeat center center/cover;
+    background: url('12.jpg') no-repeat center center/cover;
     /* background-position: -100px 50px !important; */
     position: relative;
     display: flex;
@@ -1585,4 +1585,67 @@ a {
 /* Можно также удалить или закомментировать старые стили .location-image */
 .location-image {
     display: none; /* Скрываем старый блок с фото */
+}
+
+
+.submit-btn {
+    padding: 16px;
+    background-color: #ffffff;
+    color: #252525;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для disabled состояния */
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+    background-color: #cccccc;
+    color: #666666;
+    box-shadow: none;
+}
+
+/* Стили для состояния загрузки */
+.submit-btn.loading {
+    background-color: #cccccc;
+    color: transparent;
+    pointer-events: none;
+}
+
+.submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #252525;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: button-spinner 0.8s linear infinite;
+}
+
+@keyframes button-spinner {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
