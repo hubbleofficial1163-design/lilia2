@@ -34,7 +34,7 @@ body {
 /* Hero секция */
 .hero {
     height: 100vh;
-    background: url('12.jpg') no-repeat center center/cover;
+    background: url('1.jpg') no-repeat center center/cover;
     /* background-position: -100px 50px !important; */
     position: relative;
     display: flex;
@@ -1649,3 +1649,4 @@ a {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
