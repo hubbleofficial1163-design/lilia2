@@ -34,8 +34,8 @@ body {
 /* Hero секция */
 .hero {
     height: 100vh;
-    background: url('1.jpg') no-repeat center center/cover;
-    background-position: -100px 50px !important;
+    background: url('11.jpg') no-repeat center center/cover;
+    /* background-position: -100px 50px !important; */
     position: relative;
     display: flex;
     align-items: center;
